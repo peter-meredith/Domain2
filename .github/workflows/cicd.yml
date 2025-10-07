@@ -3,7 +3,6 @@ on: workflow_dispatch
 jobs:
     build:
         name: Build Mega Code
-        runs-on: ubuntu-latest
         strategy:
             matrix:
                 color: ["red"]
@@ -14,7 +13,6 @@ jobs:
             color: ${{matrix.color}}
     test:
         name: Test Mega Code
-        runs-on: ubuntu-latest
         needs: build
         uses: ./.github/workflows/m-test.yml
         with:
