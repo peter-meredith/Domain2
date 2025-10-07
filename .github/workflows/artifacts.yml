@@ -1,0 +1,14 @@
+name: Create Artifact
+on: workflow_dispatch
+jobs:
+    create-and-upload-artifact:
+        name: Create Artifact
+        runs-on: ubuntu-latest
+        steps:
+            - name: Create Artifact
+              run: echo "File contents alpha bravo" > myfile.txt
+            - name: Upload Artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: uploaded-File
+                  path: "myfile.txt"
