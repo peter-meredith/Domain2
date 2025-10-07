@@ -3,6 +3,7 @@ on: workflow_dispatch
 jobs:
     build:
         name: CI/CD
+        runs-on: ubuntu-latest
         strategy:
             matrix:
                 color: ["red"]
@@ -13,6 +14,7 @@ jobs:
             color: ${{matrix.color}}
     test:
         needs: build
+        runs-on: ubuntu-latest
         uses: ./.github/workflows/m-test.yml
         with:
             color: ${{needs.build.outputs.color}}
