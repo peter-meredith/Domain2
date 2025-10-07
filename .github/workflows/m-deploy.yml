@@ -5,6 +5,9 @@ on:
             environment:
                 type: string
                 required: true
+            color:
+                type: string
+                required: false
 jobs:
     deploy-staging:
         name: Deploy Mega Code
@@ -12,3 +15,5 @@ jobs:
         environment: ${{ inputs.environment }}
         steps:
             - run: echo "Deploying Mega Code to ${{inputs.environment}}"
+            - if: ${{ inputs.color }}
+              run: echo "Color is ${{inputs.color}}"
