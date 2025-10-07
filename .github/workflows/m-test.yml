@@ -8,6 +8,7 @@ on:
 jobs:
     test:
         name: Test Mega Code
+        runs-on: ubuntu-latest
         steps:
             - name: Testing Mega Code
               run: echo "Testing Mega Code color ${{inputs.color}}"

@@ -1,7 +1,7 @@
 name: Deploy Mega Code
 on:
     workflow_call:
-        input:
+        inputs:
             environment:
                 type: string
                 required: true
