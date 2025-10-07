@@ -1,13 +1,13 @@
 name: CI/CD
 on: workflow_dispatch
 env:
-    colors: "red"
+    colors: ["red", "green"]
 jobs:
     build:
         name: Build Mega Code
         strategy:
             matrix:
-                color: ${{ env.colors }}
+                color: ${{ fromJSON(env.colors) }}
         uses: ./.github/workflows/m-build.yml
         with:
             color: ${{ matrix.color }}
