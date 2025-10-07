@@ -1,22 +1,14 @@
 name: CI/CD
 on: workflow_dispatch
-vars:
-    colors: "['red', 'green']"
 jobs:
     build:
         name: Build Mega Code
-        strategy:
-            matrix:
-                color: ${{ fromJSON(vars.colors) }}
         uses: ./.github/workflows/m-build.yml
         with:
-            color: ${{ matrix.color }}
+            color: "red"
     test:
         name: Test Mega Code
-        strategy:
-            matrix:
-                color: ${{ fromJSON(vars.colors) }}
         needs: build
         uses: ./.github/workflows/m-test.yml
         with:
-            color: ${{ matrix.color }}
+            color: "red"
