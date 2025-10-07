@@ -8,4 +8,4 @@ jobs:
                 color: ["red", "blue", "green"]
         uses: ./.github/workflows/m-build.yml
         with:
-            color: ${{matix.color}}
+            color: ${{matrix.color}}
