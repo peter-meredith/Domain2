@@ -1,0 +1,11 @@
+name: Deploy Mega Code
+on: workflow_dispatch
+input:
+    color:
+        type: string
+        required: true
+jobs:
+    deploy:
+        name: Deploy Mega Code
+        steps:
+            - run: echo "Deploying Mega Code color ${{color}}"

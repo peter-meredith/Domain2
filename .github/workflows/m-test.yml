@@ -1,0 +1,11 @@
+name: Test Mega Code
+on: workflow_dispatch
+inputs:
+    color:
+        type: string
+        required: true
+jobs:
+    test:
+        name: Test Mega Code
+        steps:
+            run: echo "Testing Mega Code color ${{color}}"

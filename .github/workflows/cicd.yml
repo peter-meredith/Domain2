@@ -1,0 +1,10 @@
+name: CI/CD
+on: workflow_dispatch
+jobs:
+    cicd:
+        name: CI/CD
+        matrix:
+            color: ["red", "blue", "green"]
+        uses: ./.github/workflows/m-build.yml
+        with:
+            color: ${{matix.color}}
