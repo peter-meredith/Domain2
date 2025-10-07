@@ -4,7 +4,7 @@ jobs:
     build:
         name: Build Mega Code
         uses: ./.github/workflows/m-build.yml
-        output:
+        outputs:
             color: ${{matrix.color}}
         strategy:
             matrix:
