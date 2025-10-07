@@ -1,7 +1,7 @@
 name: CI/CD
 on: workflow_dispatch
 env:
-    colors: ["red"]
+    colors: "red"
 jobs:
     build:
         name: Build Mega Code
