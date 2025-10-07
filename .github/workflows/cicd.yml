@@ -1,7 +1,5 @@
 name: CI/CD
 on: workflow_dispatch
-env:
-    environments: ["production", "staging", "development"]
 jobs:
     build:
         name: CI/CD
