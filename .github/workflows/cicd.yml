@@ -15,9 +15,13 @@ jobs:
     deploy-staging:
         name: Deploy to Staging
         needs: test
+        strategy:
+            matrix:
+                color: ["red", "green", "blue"]
         uses: ./.github/workflows/m-deploy.yml
         with:
             environment: staging
+            color: ${{ matrix.color }}
     deploy-production:
         name: Deploy to Production
         needs: deploy-staging
