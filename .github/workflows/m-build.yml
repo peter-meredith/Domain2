@@ -10,4 +10,5 @@ jobs:
         name: Build Mega Code
         runs-on: ubuntu-latest
         steps:
-            run: echo "Building for ${{inputs.color}}"
+            - name: Building Mega Code
+              run: echo "Building for ${{inputs.color}}"
