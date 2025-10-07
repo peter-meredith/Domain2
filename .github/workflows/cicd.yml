@@ -17,4 +17,4 @@ jobs:
         needs: test
         uses: ./.github/workflows/m-deploy.yml
         with:
-            environment: "staging"
+            environment: staging
