@@ -6,7 +6,7 @@ on:
                 type: string
                 required: true
 jobs:
-    deploy:
+    deploy-staging:
         name: Deploy Mega Code
         runs-on: ubuntu-latest
         environment: ${{ inputs.environment }}

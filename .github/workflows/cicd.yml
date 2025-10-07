@@ -18,3 +18,9 @@ jobs:
         uses: ./.github/workflows/m-deploy.yml
         with:
             environment: staging
+    deploy-production:
+        name: Deploy to Production
+        needs: deploy-staging
+        uses: ./.github/workflows/m-deploy.yml
+        with:
+            environment: production
