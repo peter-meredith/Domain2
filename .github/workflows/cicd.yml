@@ -3,12 +3,12 @@ on: workflow_dispatch
 jobs:
     build:
         name: Build Mega Code
-        uses: ./.github/workflows/m-build.yml
         outputs:
             color: ${{matrix.color}}
         strategy:
             matrix:
                 color: ["red"]
+        uses: ./.github/workflows/m-build.yml
         with:
             color: ${{matrix.color}}
     test:
