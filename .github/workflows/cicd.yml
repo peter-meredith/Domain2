@@ -12,3 +12,9 @@ jobs:
         uses: ./.github/workflows/m-test.yml
         with:
             color: "red"
+    deploy-staging:
+        name: Deploy to Staging
+        needs: test
+        uses: ./.github/workflows/m-deploy.yml
+        with:
+            environment: staging
