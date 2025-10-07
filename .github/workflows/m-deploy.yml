@@ -1,12 +1,14 @@
 name: Deploy Mega Code
-on: workflow_call
-input:
-    environment:
-        type: string
-        required: true
+on:
+    workflow_call:
+        input:
+            environment:
+                type: string
+                required: true
 jobs:
     deploy:
         name: Deploy Mega Code
+        runs-on: ubuntu-latest
         environment: ${{ inputs.environment }}
         steps:
             - run: echo "Deploying Mega Code to ${{inputs.environment}}"

@@ -1,6 +1,6 @@
 name: Test Mega Code
 on:
-    workflow_dispatch:
+    workflow_call:
         inputs:
             color:
                 type: string
