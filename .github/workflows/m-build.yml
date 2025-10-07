@@ -1,13 +1,14 @@
 name: Build Mega Code
-on: workflow_dispatch
-inputs:
-    color:
-        type: string
-        required: true
+on:
+    workflow_call:
+        inputs:
+            color:
+                type: string
+                required: true
 jobs:
     build:
         name: Build Mega Code
         runs-on: ubuntu-latest
 
         steps:
-            run: echo "Building for ${{color}}"
+            run: echo "Building for ${{inputs.color}}"
