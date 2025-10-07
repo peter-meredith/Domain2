@@ -1,13 +1,13 @@
 name: Test Mega Code
-on: 
-  workflow_dispatch:
-    inputs:
-        color:
-            type: string
-            required: true
+on:
+    workflow_dispatch:
+        inputs:
+            color:
+                type: string
+                required: true
 jobs:
     test:
         name: Test Mega Code
         steps:
-          -name: Testing Mega Code
-            run: echo "Testing Mega Code color ${{color}}"
+            - name: Testing Mega Code
+              run: echo "Testing Mega Code color ${{inputs.color}}"
