@@ -5,18 +5,12 @@ env:
 jobs:
     build:
         name: Build Mega Code
-        strategy:
-            matrix:
-                color: ${{ fromJSON(env.colors) }}
         uses: ./.github/workflows/m-build.yml
         with:
             color: ${{ matrix.color }}
     test:
         name: Test Mega Code
         needs: build
-        strategy:
-            matrix:
-                color: ${{ env.colors }}
         uses: ./.github/workflows/m-test.yml
         with:
             color: ${{ matrix.color }}
