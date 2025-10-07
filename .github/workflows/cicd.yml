@@ -4,7 +4,7 @@ jobs:
     build:
         name: Build Mega Code
         outputs:
-            color: ${{matrix.color}}
+            color: "red"
         strategy:
             matrix:
                 color: ["red"]
